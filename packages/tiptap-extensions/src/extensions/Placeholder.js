@@ -1,4 +1,4 @@
-import { Extension, Plugin } from 'tiptap'
+import { Extension, Plugin } from 'tiptap-v1'
 import { Decoration, DecorationSet } from 'prosemirror-view'
 
 export default class Placeholder extends Extension {

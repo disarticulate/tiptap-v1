@@ -1,5 +1,5 @@
 {
-  "name": "tiptap-extensions",
+  "name": "tiptap-extensions-v1",
   "version": "1.35.2",
   "description": "Extensions for tiptap",
   "homepage": "https://tiptap.dev",
@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ueberdosis/tiptap.git"
+    "url": "git+https://github.com/disarticulate/tiptap-v1.git"
   },
   "bugs": {
-    "url": "https://github.com/ueberdosis/tiptap/issues"
+    "url": "https://github.com/disarticulate/tiptap/issues"
   },
   "dependencies": {
     "lowlight": "^1.17.0",

@@ -1,4 +1,4 @@
-import { Node } from 'tiptap'
+import { Node } from 'tiptap-v1'
 import TableNodes from './TableNodes'
 
 export default class TableHeader extends Node {

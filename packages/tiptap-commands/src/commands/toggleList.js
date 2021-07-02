@@ -1,5 +1,5 @@
 import { wrapInList, liftListItem } from 'prosemirror-schema-list'
-import { findParentNode } from 'tiptap-utils'
+import { findParentNode } from 'tiptap-utils-v1'
 
 function isList(node, schema) {
   return (node.type === schema.nodes.bullet_list

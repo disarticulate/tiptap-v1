@@ -16,7 +16,7 @@ import {
  nodeIsActive,
  getMarkAttrs,
  getNodeAttrs,
-} from 'tiptap-utils'
+} from 'tiptap-utils-v1'
 import {
   injectCSS,
   camelCase,

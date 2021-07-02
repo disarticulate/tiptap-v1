@@ -1,5 +1,5 @@
 import { setBlockType } from 'prosemirror-commands'
-import { nodeIsActive } from 'tiptap-utils'
+import { nodeIsActive } from 'tiptap-utils-v1'
 
 export default function (type, toggletype, attrs = {}) {
   return (state, dispatch, view) => {

@@ -1,5 +1,5 @@
 {
-  "name": "tiptap-packages",
+  "name": "tiptap-packages-v1",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -8,7 +8,8 @@
     "start": "node ./node_modules/@babel/node/bin/babel-node.js ./build/examples/server.js --env=development",
     "build:packages": "node ./node_modules/@babel/node/bin/babel-node.js ./build/packages/build.js",
     "build:examples": "node ./node_modules/@babel/node/bin/babel-node.js ./build/examples/build.js --env=production",
-    "release": "rm -Rf dist && yarn build:packages && yarn lint && yarn test && lerna publish",
+    "release": "yarn clean && yarn build:packages && yarn lint && yarn test && lerna publish",
+    "clean": "rm -Rf dist",
     "lint": "eslint --quiet ./packages/**/src/**",
     "test": "jest",
     "audit-ci": "audit-ci --critical",
@@ -88,14 +89,11 @@
     "webpack-hot-middleware": "^2.25.0",
     "webpack-manifest-plugin": "^2.1.2",
     "webpack-svgstore-plugin": "^4.1.0",
-    "zlib": "^1.0.5"
+    "zlib": "^1.0.5",
+    "@vue/compiler-sfc": "^3.1.2"
   },
   "dependencies": {
-    "@vue/compiler-sfc": "^3.1.2",
     "socket.io-client": "^2.3.0",
     "vue-github-button": "^1.3.0"
-  },
-  "peerDependencies": {
-    "@vue/compiler-sfc": "^3.1.2"
   }
 }

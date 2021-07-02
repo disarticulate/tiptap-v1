@@ -1,5 +1,5 @@
-import { Node } from 'tiptap'
-import { replaceText } from 'tiptap-commands'
+import { Node } from 'tiptap-v1'
+import { replaceText } from 'tiptap-commands-v1'
 import { Fragment } from 'prosemirror-model'
 import SuggestionsPlugin from '../plugins/Suggestions'
 

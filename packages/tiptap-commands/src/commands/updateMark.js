@@ -1,4 +1,4 @@
-import { getMarkRange } from 'tiptap-utils'
+import { getMarkRange } from 'tiptap-utils-v1'
 
 export default function (type, attrs) {
   return (state, dispatch) => {

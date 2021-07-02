@@ -1,5 +1,5 @@
-import { Node } from 'tiptap'
-import { chainCommands, exitCode } from 'tiptap-commands'
+import { Node } from 'tiptap-v1'
+import { chainCommands, exitCode } from 'tiptap-commands-v1'
 
 export default class HardBreak extends Node {
 

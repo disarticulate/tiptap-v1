@@ -1,5 +1,5 @@
 import { wrapIn, lift } from 'prosemirror-commands'
-import { nodeIsActive } from 'tiptap-utils'
+import { nodeIsActive } from 'tiptap-utils-v1'
 
 export default function (type, attrs = {}) {
   return (state, dispatch, view) => {

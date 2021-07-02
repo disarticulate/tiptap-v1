@@ -1,5 +1,5 @@
-import { Mark } from 'tiptap'
-import { toggleMark } from 'tiptap-commands'
+import { Mark } from 'tiptap-v1'
+import { toggleMark } from 'tiptap-commands-v1'
 
 export default class Underline extends Mark {
 

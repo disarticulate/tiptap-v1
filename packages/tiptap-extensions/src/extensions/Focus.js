@@ -1,4 +1,4 @@
-import { Extension, Plugin } from 'tiptap'
+import { Extension, Plugin } from 'tiptap-v1'
 import { DecorationSet, Decoration } from 'prosemirror-view'
 
 export default class Focus extends Extension {

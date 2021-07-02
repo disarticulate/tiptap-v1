@@ -1,4 +1,4 @@
-import { Node } from 'tiptap'
+import { Node } from 'tiptap-v1'
 import {
   tableEditing,
   columnResizing,
@@ -18,7 +18,7 @@ import {
   setCellAttr,
   fixTables,
 } from 'prosemirror-tables'
-import { createTable } from 'tiptap-utils'
+import { createTable } from 'tiptap-utils-v1'
 import { TextSelection } from 'prosemirror-state'
 import TableNodes from './TableNodes'
 

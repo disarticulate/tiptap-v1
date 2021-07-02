@@ -59,23 +59,23 @@ function genConfig(opts) {
 export default [
   {
     package: 'tiptap',
-    outputName: 'tiptap',
-    outputFileName: 'tiptap',
+    outputName: 'tiptap-v1',
+    outputFileName: 'tiptap-v1',
   },
   {
     package: 'tiptap-commands',
-    outputName: 'tiptapCommands',
-    outputFileName: 'commands',
+    outputName: 'tiptapCommands-v1',
+    outputFileName: 'commands-v1',
   },
   {
     package: 'tiptap-utils',
-    outputName: 'tiptapUtils',
-    outputFileName: 'utils',
+    outputName: 'tiptapUtils-v1',
+    outputFileName: 'utils-v1',
   },
   {
     package: 'tiptap-extensions',
-    outputName: 'tiptapExtensions',
-    outputFileName: 'extensions',
+    outputName: 'tiptapExtensions-v1',
+    outputFileName: 'extensions-v1',
   },
 ].map(item => [
   {

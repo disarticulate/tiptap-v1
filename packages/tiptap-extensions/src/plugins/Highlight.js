@@ -1,6 +1,6 @@
-import { Plugin, PluginKey } from 'tiptap'
+import { Plugin, PluginKey } from 'tiptap-v1'
 import { Decoration, DecorationSet } from 'prosemirror-view'
-import { findBlockNodes } from 'tiptap-utils'
+import { findBlockNodes } from 'tiptap-utils-v1'
 import low from 'lowlight/lib/core'
 
 function getDecorations({ doc, name }) {

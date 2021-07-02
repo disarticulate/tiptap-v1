@@ -1,5 +1,5 @@
 {
-  "name": "tiptap-commands",
+  "name": "tiptap-commands-v1",
   "version": "1.17.1",
   "description": "Commands for tiptap",
   "homepage": "https://tiptap.dev",
@@ -14,10 +14,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ueberdosis/tiptap.git"
+    "url": "git+https://github.com/disarticulate/tiptap-v1.git"
   },
   "bugs": {
-    "url": "https://github.com/ueberdosis/tiptap/issues"
+    "url": "https://github.com/disarticulate/tiptap/issues"
   },
   "dependencies": {
     "prosemirror-commands": "^1.1.4",

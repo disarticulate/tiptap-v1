@@ -1,4 +1,4 @@
-import { Extension } from 'tiptap'
+import { Extension } from 'tiptap-v1'
 import { Step } from 'prosemirror-transform'
 import {
   collab,

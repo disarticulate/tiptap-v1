@@ -1,5 +1,5 @@
-import { Node, Plugin } from 'tiptap'
-import { nodeInputRule } from 'tiptap-commands'
+import { Node, Plugin } from 'tiptap-v1'
+import { nodeInputRule } from 'tiptap-commands-v1'
 
 /**
  * Matches following attributes in Markdown-typed image: [, alt, src, title]
