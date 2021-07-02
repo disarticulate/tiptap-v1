@@ -4,10 +4,10 @@
   "description": "Utility functions for tiptap",
   "homepage": "https://tiptap.dev",
   "license": "MIT",
-  "main": "dist/utils.common.js",
-  "module": "dist/utils.esm.js",
-  "unpkg": "dist/utils.js",
-  "jsdelivr": "dist/utils.js",
+  "main": "dist/utils-v1.common.js",
+  "module": "dist/utils-v1.esm.js",
+  "unpkg": "dist/utils-v1.js",
+  "jsdelivr": "dist/utils-v1.js",
   "files": [
     "src",
     "dist"

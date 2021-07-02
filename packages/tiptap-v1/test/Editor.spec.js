@@ -19,7 +19,7 @@ import {
   Strike,
   Underline,
   History,
-} from '../../tiptap-extensions'
+} from '../../tiptap-extensions-v1'
 
 global.MutationObserver = MutationObserver
 
