@@ -1,4 +1,4 @@
-import { Node } from 'tiptap'
+import { Node } from 'tiptap-v1'
 
 export default class Iframe extends Node {
 

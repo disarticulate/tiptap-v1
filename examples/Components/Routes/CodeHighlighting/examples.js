@@ -30,10 +30,10 @@ body, .usertext {
 
 export const ExplicitImportExample = `import javascript from 'highlight.js/lib/languages/javascript'
 import css from 'highlight.js/lib/languages/css'
-import { Editor } from 'tiptap'
+import { Editor } from 'tiptap-v1'
 import {
   CodeBlockHighlight,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 export default {
   components: {

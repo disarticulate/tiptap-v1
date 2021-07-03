@@ -31,10 +31,15 @@ export default {
     publicPath: '/',
   },
 
+  externals: {
+    // vue: "Vue",
+  },
+
   resolve: {
     extensions: ['.js', '.scss', '.vue'],
     alias: {
-      vue$: 'vue/dist/vue.esm.js',
+      // vue$: 'vue/dist/vue.esm.js',
+      'vue$': 'vue/dist/vue.runtime.esm-bundler.js',
       modules: path.resolve(rootPath, '../node_modules'),
       images: `${srcPath}/assets/images`,
       fonts: `${srcPath}/assets/fonts`,
@@ -221,6 +226,11 @@ export default {
           { removeEmptyAttrs: false },
         ],
       }),
+    }),
+
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: false,
+      __VUE_PROD_DEVTOOLS__: false,
     }),
 
   ]),

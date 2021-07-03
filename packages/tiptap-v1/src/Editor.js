@@ -12,10 +12,10 @@ import { keymap } from 'prosemirror-keymap'
 import { baseKeymap } from 'prosemirror-commands'
 import { inputRules, undoInputRule } from 'prosemirror-inputrules'
 import {
- markIsActive,
- nodeIsActive,
- getMarkAttrs,
- getNodeAttrs,
+  markIsActive,
+  nodeIsActive,
+  getMarkAttrs,
+  getNodeAttrs,
 } from 'tiptap-utils-v1'
 import {
   defaultEditorOpts,
@@ -38,7 +38,7 @@ export default class Editor extends Emitter {
     this.defaultOptions = defaultEditorOpts
 
     this.events = defaultEditorEvents
-
+    console.log(options)
     this.init(options)
   }
 
@@ -65,15 +65,12 @@ export default class Editor extends Emitter {
     if (this.options.injectCSS) {
       injectCSS(css)
     }
-    if (!this.options.Vue) {
-      this.options.Vue = require('vue')
-    }
     if (this.options.autoFocus !== null) {
       this.focus(this.options.autoFocus)
     }
 
     this.events.forEach(name => {
-      this.on(name, this.options[camelCase(`on ${name}`)] || (() => {}))
+      this.on(name, this.options[camelCase(`on ${name}`)] || (() => { }))
     })
 
     this.emit('init', {
@@ -110,10 +107,6 @@ export default class Editor extends Emitter {
 
   get state() {
     return this.view ? this.view.state : null
-  }
-
-  get Vue () {
-    return this.options.Vue
   }
 
   createExtensions() {

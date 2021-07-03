@@ -40,7 +40,7 @@
 
 <script>
 import Icon from 'Components/Icon'
-import { Editor, EditorContent, EditorMenuBubble } from 'tiptap'
+import { Editor, EditorContent, EditorMenuBubble } from 'tiptap-v1'
 import {
   Blockquote,
   BulletList,
@@ -58,7 +58,7 @@ import {
   Strike,
   Underline,
   History,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 export default {
   components: {

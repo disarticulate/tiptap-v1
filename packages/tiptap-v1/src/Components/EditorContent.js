@@ -1,3 +1,5 @@
+import { h } from 'vue'
+
 export default {
 
   props: {
@@ -11,6 +13,7 @@ export default {
     editor: {
       immediate: true,
       handler(editor) {
+        console.log('editor', editor)
         if (editor && editor.element) {
           this.$nextTick(() => {
             this.$el.appendChild(editor.element.firstChild)
@@ -21,8 +24,8 @@ export default {
     },
   },
 
-  render(createElement) {
-    return createElement('div')
+  render() {
+    return h('div')
   },
 
   beforeDestroy() {

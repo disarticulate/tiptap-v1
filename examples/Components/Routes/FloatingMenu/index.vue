@@ -72,7 +72,7 @@
 
 <script>
 import Icon from 'Components/Icon'
-import { Editor, EditorContent, EditorFloatingMenu } from 'tiptap'
+import { Editor, EditorContent, EditorFloatingMenu } from 'tiptap-v1'
 import {
   Blockquote,
   BulletList,
@@ -88,7 +88,7 @@ import {
   Italic,
   Link,
   History,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 export default {
   components: {

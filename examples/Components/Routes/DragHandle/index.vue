@@ -6,8 +6,8 @@
 
 <script>
 import Icon from 'Components/Icon'
-import { Editor, EditorContent } from 'tiptap'
-import { Heading, Code } from 'tiptap-extensions'
+import { Editor, EditorContent } from 'tiptap-v1'
+import { Heading, Code } from 'tiptap-extensions-v1'
 import DragItem from './DragItem'
 
 export default {

@@ -1,4 +1,4 @@
-import { Doc } from 'tiptap'
+import { Doc } from 'tiptap-v1'
 
 export default class CustomDoc extends Doc {
 

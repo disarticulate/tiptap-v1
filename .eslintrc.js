@@ -54,9 +54,9 @@ module.exports = {
     'padded-blocks': 'off',
 
     'class-methods-use-this': 'off',
-
+    'no-console': 'off',
     'global-require': 'off',
-
+    'comma-dangle': 'off',
     'func-names': ['error', 'never'],
   }
 }

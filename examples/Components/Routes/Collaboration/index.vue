@@ -20,7 +20,7 @@
 
 <script>
 import io from 'socket.io-client'
-import { Editor, EditorContent } from 'tiptap'
+import { Editor, EditorContent } from 'tiptap-v1'
 import {
   HardBreak,
   Heading,
@@ -29,7 +29,7 @@ import {
   Italic,
   History,
   Collaboration,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 export default {
   components: {

@@ -1,6 +1,5 @@
-// import Vue from 'vue'
-
 import { getMarkRange } from 'tiptap-utils-v1'
+import { defineComponent } from 'vue'
 
 export default class ComponentView {
 
@@ -29,18 +28,10 @@ export default class ComponentView {
   }
 
   createDOM() {
-    const Component = this.Vue.extend(this.component)
-    const props = {
-      editor: this.editor,
-      node: this.node,
-      view: this.view,
-      getPos: () => this.getPos(),
-      decorations: this.decorations,
-      selected: false,
-      options: this.extension.options,
-      updateAttrs: attrs => this.updateAttrs(attrs),
-    }
-
+    const Component = defineComponent({
+      extends: this.component
+    })
+    console.log('createDOM', Component)
     if (typeof this.extension.setSelection === 'function') {
       this.setSelection = this.extension.setSelection
     }
@@ -51,7 +42,16 @@ export default class ComponentView {
 
     this.vm = new Component({
       parent: this.parent,
-      propsData: props,
+      propsData: {
+        editor: this.editor,
+        node: this.node,
+        view: this.view,
+        getPos: () => this.getPos(),
+        decorations: this.decorations,
+        selected: false,
+        options: this.extension.options,
+        updateAttrs: attrs => this.updateAttrs(attrs),
+      },
     }).$mount()
 
     return this.vm.$el

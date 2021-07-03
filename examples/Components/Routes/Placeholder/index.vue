@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import { Editor, EditorContent } from 'tiptap'
+import { Editor, EditorContent } from 'tiptap-v1'
 import {
   BulletList,
   ListItem,
   Placeholder,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 export default {
   components: {

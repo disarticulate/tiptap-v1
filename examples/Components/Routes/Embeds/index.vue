@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { Editor, EditorContent } from 'tiptap'
+import { Editor, EditorContent } from 'tiptap-v1'
 import {
   HardBreak,
   Heading,
@@ -13,7 +13,7 @@ import {
   Italic,
   History,
   TrailingNode,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 import Iframe from './Iframe.js'
 
 export default {

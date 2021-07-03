@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import { Editor, EditorContent } from 'tiptap'
-import { Placeholder } from 'tiptap-extensions'
+import { Editor, EditorContent } from 'tiptap-v1'
+import { Placeholder } from 'tiptap-extensions-v1'
 import Doc from './Doc'
 import Title from './Title'
 

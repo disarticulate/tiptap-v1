@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { Editor, EditorContent } from 'tiptap'
+import { Editor, EditorContent } from 'tiptap-v1'
 import {
   HardBreak,
   Heading,
@@ -18,7 +18,7 @@ import {
   Code,
   Italic,
   Link,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 export default {
   components: {

@@ -37,7 +37,7 @@
 import Fuse from 'fuse.js'
 import tippy, { sticky } from 'tippy.js'
 import Icon from 'Components/Icon'
-import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap-v1'
 import {
   HardBreak,
   Heading,
@@ -45,7 +45,7 @@ import {
   Code,
   Bold,
   Italic,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 export default {
 

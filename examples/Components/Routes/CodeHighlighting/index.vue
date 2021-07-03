@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { Editor, EditorContent } from 'tiptap'
+import { Editor, EditorContent } from 'tiptap-v1'
 import {
   CodeBlockHighlight,
   HardBreak,
@@ -13,7 +13,7 @@ import {
   Bold,
   Code,
   Italic,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 import javascript from 'highlight.js/lib/languages/javascript'
 import css from 'highlight.js/lib/languages/css'

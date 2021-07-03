@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "node ./node_modules/@babel/node/bin/babel-node.js ./build/examples/server.js --env=development",
+    "start": "babel-watch ./build/examples/server.js",
     "build:packages": "node ./node_modules/@babel/node/bin/babel-node.js ./build/packages/build.js",
     "build:examples": "node ./node_modules/@babel/node/bin/babel-node.js ./build/examples/build.js --env=production",
     "release": "yarn clean && yarn build:packages && yarn lint && yarn test && lerna publish",
@@ -33,12 +33,14 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-stage-2": "^7.0.0",
+    "@vue/compiler-sfc": "^3.1.2",
     "audit-ci": "^2.4.2",
     "autoprefixer": "^9.7.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.2.2",
+    "babel-watch": "^7.4.1",
     "browser-sync": "^2.26.13",
     "connect-history-api-fallback": "^1.6.0",
     "copy-webpack-plugin": "^5.0.5",
@@ -82,18 +84,17 @@
     "tippy.js": "^6.2.7",
     "vue": "^3.1.2",
     "vue-loader": "^16.2.0",
-    "vue-router": "^3.4.9",
+    "vue-router": "4",
     "vue-style-loader": "^4.1.0",
     "webpack": "^4.41.2",
     "webpack-dev-middleware": "^3.7.1",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-manifest-plugin": "^2.1.2",
     "webpack-svgstore-plugin": "^4.1.0",
-    "zlib": "^1.0.5",
-    "@vue/compiler-sfc": "^3.1.2"
+    "zlib": "^1.0.5"
   },
   "dependencies": {
     "socket.io-client": "^2.3.0",
-    "vue-github-button": "^1.3.0"
+    "vue-github-button": "^3.0.1"
   }
 }

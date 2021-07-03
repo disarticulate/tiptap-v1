@@ -137,7 +137,7 @@
 
 <script>
 import Icon from 'Components/Icon'
-import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap-v1'
 import {
   Blockquote,
   CodeBlock,
@@ -157,7 +157,7 @@ import {
   Underline,
   History,
   TrailingNode,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions-v1'
 
 export default {
   components: {
