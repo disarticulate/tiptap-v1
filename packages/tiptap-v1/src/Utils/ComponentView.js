@@ -1,4 +1,4 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 
 import { getMarkRange } from 'tiptap-utils-v1'
 
@@ -29,7 +29,7 @@ export default class ComponentView {
   }
 
   createDOM() {
-    const Component = Vue.extend(this.component)
+    const Component = this.Vue.extend(this.component)
     const props = {
       editor: this.editor,
       node: this.node,
@@ -85,15 +85,15 @@ export default class ComponentView {
     // Update props in component
     // TODO: Avoid mutating a prop directly.
     // Maybe there is a better way to do this?
-    const originalSilent = Vue.config.silent
-    Vue.config.silent = true
+    const originalSilent = this.Vue.config.silent
+    this.Vue.config.silent = true
 
     Object.entries(props).forEach(([key, value]) => {
       this.vm._props[key] = value
     })
     // this.vm._props.node = node
     // this.vm._props.decorations = decorations
-    Vue.config.silent = originalSilent
+    this.Vue.config.silent = originalSilent
   }
 
   updateAttrs(attrs) {
@@ -183,6 +183,10 @@ export default class ComponentView {
     const resolvedPos = this.view.state.doc.resolve(pos)
     const range = getMarkRange(resolvedPos, this.node.type)
     return range
+  }
+
+  get Vue() {
+    return this.editor.Vue
   }
 
   destroy() {

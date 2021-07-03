@@ -18,6 +18,8 @@ import {
  getNodeAttrs,
 } from 'tiptap-utils-v1'
 import {
+  defaultEditorOpts,
+  defaultEditorEvents,
   injectCSS,
   camelCase,
   Emitter,
@@ -33,45 +35,9 @@ export default class Editor extends Emitter {
   constructor(options = {}) {
     super()
 
-    this.defaultOptions = {
-      editorProps: {},
-      editable: true,
-      autoFocus: null,
-      extensions: [],
-      content: '',
-      topNode: 'doc',
-      emptyDocument: {
-        type: 'doc',
-        content: [{
-          type: 'paragraph',
-        }],
-      },
-      useBuiltInExtensions: true,
-      disableInputRules: false,
-      disablePasteRules: false,
-      dropCursor: {},
-      enableDropCursor: true,
-      enableGapCursor: true,
-      parseOptions: {},
-      injectCSS: true,
-      onInit: () => {},
-      onTransaction: () => {},
-      onUpdate: () => {},
-      onFocus: () => {},
-      onBlur: () => {},
-      onPaste: () => {},
-      onDrop: () => {},
-    }
+    this.defaultOptions = defaultEditorOpts
 
-    this.events = [
-      'init',
-      'transaction',
-      'update',
-      'focus',
-      'blur',
-      'paste',
-      'drop',
-    ]
+    this.events = defaultEditorEvents
 
     this.init(options)
   }
@@ -99,7 +65,9 @@ export default class Editor extends Emitter {
     if (this.options.injectCSS) {
       injectCSS(css)
     }
-
+    if (!this.options.Vue) {
+      this.options.Vue = require('vue')
+    }
     if (this.options.autoFocus !== null) {
       this.focus(this.options.autoFocus)
     }
@@ -142,6 +110,10 @@ export default class Editor extends Emitter {
 
   get state() {
     return this.view ? this.view.state : null
+  }
+
+  get Vue () {
+    return this.options.Vue
   }
 
   createExtensions() {
@@ -523,8 +495,8 @@ export default class Editor extends Emitter {
     if (!this.view) {
       return
     }
-
     this.view.destroy()
+    this.emit('destroy')
   }
 
 }
