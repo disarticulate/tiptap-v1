@@ -6,7 +6,7 @@ export default function findSelectedNodeOfType(nodeType) {
   return function (selection) {
     if (isNodeSelection(selection)) {
       const { node } = selection
-          const { $from } = selection
+      const { $from } = selection
 
       if (equalNodeType(nodeType, node)) {
         return { node, pos: $from.pos, depth: $from.depth }

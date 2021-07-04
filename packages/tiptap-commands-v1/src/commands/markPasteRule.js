@@ -32,7 +32,7 @@ export default function (regexp, type, getAttrs) {
             nodes.push(child
               .cut(textStart, textEnd)
               .mark(type.create(attrs)
-              .addToSet(child.marks)))
+                .addToSet(child.marks)))
 
             pos = end
           }

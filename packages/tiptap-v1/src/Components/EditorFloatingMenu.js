@@ -19,6 +19,8 @@ export default {
     }
   },
 
+  emits: ['show', 'hide'],
+
   watch: {
     editor: {
       immediate: true,
@@ -49,7 +51,7 @@ export default {
       return null
     }
 
-    return this.$scopedSlots.default({
+    return this.$.slots.default({
       focused: this.editor.view.focused,
       focus: this.editor.focus,
       commands: this.editor.commands,

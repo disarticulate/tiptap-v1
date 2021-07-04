@@ -7,14 +7,14 @@ import { Fragment, Slice } from 'prosemirror-model'
 /* eslint-disable max-len, no-plusplus, no-undef, eqeqeq */
 function canSplit(doc, pos, depth = 1, typesAfter) {
   const $pos = doc.resolve(pos); const
-base = $pos.depth - depth
+    base = $pos.depth - depth
   const innerType = (typesAfter && typesAfter[typesAfter.length - 1]) || $pos.parent
   if (base < 0 || $pos.parent.type.spec.isolating
       || !$pos.parent.canReplace($pos.index(), $pos.parent.childCount)
       || !innerType.type.validContent($pos.parent.content.cutByIndex($pos.index(), $pos.parent.childCount))) return false
   for (let d = $pos.depth - 1, i = depth - 2; d > base; d--, i--) {
     const node = $pos.node(d); const
-index = $pos.index(d)
+      index = $pos.index(d)
     if (node.type.spec.isolating) return false
     let rest = node.content.cutByIndex(index, node.childCount)
     const after = (typesAfter && typesAfter[i]) || node
@@ -49,7 +49,7 @@ export default function splitToDefaultListItem(itemType) {
 
       if (dispatch) {
         let wrap = Fragment.empty; const
-keepItem = $from.index(-1) > 0
+          keepItem = $from.index(-1) > 0
         // Build a fragment containing empty versions of the structure
         // from the outer list item to the parent node of the cursor
         for (let d = $from.depth - (keepItem ? 1 : 2); d >= $from.depth - 3; d--) wrap = Fragment.from($from.node(d).copy(wrap))

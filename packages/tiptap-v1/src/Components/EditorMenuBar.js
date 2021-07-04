@@ -9,48 +9,50 @@ export default {
     },
   },
 
+  watch: {
+    editor (newVal, oldVal) {
+      if (newVal) this.ready = false
+      if (!newVal && oldVal) this.ready = false
+    }
+  },
+
   data() {
     return {
+      ready: false,
       focused: false,
     }
   },
 
-  watch: {
-    editor: {
-      immediate: true,
-      handler(editor) {
-        if (editor) {
-          this.$nextTick(() => {
-            editor.registerPlugin(MenuBar({
-              editor,
-              element: this.$el,
-            }))
-
-            this.focused = editor.focused
-
-            editor.on('focus', () => {
-              this.focused = true
-            })
-
-            editor.on('menubar:focusUpdate', focused => {
-              this.focused = focused
-            })
-          })
-        }
-      },
-    },
+  methods: {
+    mountMenu (component) {
+      if (this.ready) return
+      let el = component.$el || component
+      if (!el) return
+      this.editor.registerPlugin(MenuBar({
+        editor: this.editor,
+        element: el
+      }))
+      this.focused = this.editor.focused
+      this.editor.on('focus', () => {
+        this.focused = true
+      })
+      this.editor.on('menubar:focusUpdate', focused => {
+        this.focused = focused
+      })
+      this.ready = true
+    }
   },
 
   render() {
-    if (!this.editor) {
-      return null
-    }
-
-    return this.$scopedSlots.default({
+    let hasEditor = !!this.editor
+    if (!hasEditor) return
+    return this.$.slots.default({
+      ready: this.ready,
+      mountMenu: this.mountMenu,
       focused: this.focused,
       focus: this.editor.focus,
-      commands: this.editor.commands,
-      isActive: this.editor.isActive,
+      commands:  this.editor.commands,
+      isActive:  this.editor.isActive,
       getMarkAttrs: this.editor.getMarkAttrs.bind(this.editor),
       getNodeAttrs: this.editor.getNodeAttrs.bind(this.editor),
     })

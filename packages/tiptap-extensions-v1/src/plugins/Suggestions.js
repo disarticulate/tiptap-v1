@@ -74,8 +74,8 @@ function triggerCharacter({
         // Edge case handling; if spaces are allowed and we're directly in between
         // two triggers
         if (allowSpaces && suffix.test(text.slice(to - 1, to + 1))) {
-            match[0] += ' '
-            to += 1
+          match[0] += ' '
+          to += 1
         }
 
         // If the $position is located within the matched substring, return that range

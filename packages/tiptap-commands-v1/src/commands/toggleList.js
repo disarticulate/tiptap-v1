@@ -15,7 +15,7 @@ export default function toggleList(listType, itemType) {
 
     if (!range) {
       return false
-		}
+    }
 
     const parentList = findParentNode(node => isList(node, schema))(selection)
 

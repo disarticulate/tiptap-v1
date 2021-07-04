@@ -1,9 +1,9 @@
 import path from 'path'
 import vue from 'rollup-plugin-vue'
-import babel from 'rollup-plugin-babel'
+import cjs from '@rollup/plugin-commonjs';
+import { babel } from '@rollup/plugin-babel'
 import flow from 'rollup-plugin-flow-no-whitespace'
-import cjs from 'rollup-plugin-commonjs'
-import node from 'rollup-plugin-node-resolve'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import replace from 'rollup-plugin-replace'
 import cssOnly from 'rollup-plugin-css-only'
 
@@ -24,7 +24,9 @@ function genConfig(opts) {
       plugins: [
         cssOnly({ output: false }),
         flow(),
-        node(),
+        nodeResolve({
+          browser: true
+        }),
         cjs(),
         vue({
           css: true,

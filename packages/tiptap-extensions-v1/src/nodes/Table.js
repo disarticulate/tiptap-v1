@@ -61,12 +61,12 @@ export default class Table extends Node {
       deleteRow: () => deleteRow,
       deleteTable: () => deleteTable,
       toggleCellMerge: () => (
-          (state, dispatch) => {
-            if (mergeCells(state, dispatch)) {
-              return
-            }
-            splitCell(state, dispatch)
+        (state, dispatch) => {
+          if (mergeCells(state, dispatch)) {
+            return
           }
+          splitCell(state, dispatch)
+        }
       ),
       mergeCells: () => mergeCells,
       splitCell: () => splitCell,

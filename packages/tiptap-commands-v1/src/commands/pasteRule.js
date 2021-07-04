@@ -26,7 +26,7 @@ export default function (regexp, type, getAttrs) {
             nodes.push(child
               .cut(start, end)
               .mark(type.create(attrs)
-              .addToSet(child.marks)))
+                .addToSet(child.marks)))
 
             pos = end
           }
